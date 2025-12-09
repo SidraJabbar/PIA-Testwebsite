@@ -111,6 +111,84 @@
     <div class="slide" style="background-image: url('images/3.jpg');"></div>
     <div class="slide" style="background-image: url('images/4.jpg');"></div>
   </div>
+  
+    <div class="booking-container">
+        
+        <div class="tabs-header">
+            <div class="tab active"><i class="fas fa-plane"></i> Flight</div>
+            <div class="tab"><i class="fas fa-keyboard"></i> Web Check-in</div>
+            <div class="tab"><i class="fas fa-book-open"></i> My Booking</div>
+            <div class="tab"><i class="fas fa-info-circle"></i> Flight Status</div>
+            <div class="tab"><i class="far fa-calendar-alt"></i> Schedules</div>
+        </div>
+
+        <div class="search-form-card">
+            
+            <div class="trip-type-row">
+                <div class="radio-group">
+                    <label><input type="radio" name="trip-type"> Oneway</label>
+                    <label><input type="radio" name="trip-type" checked> Roundtrip</label>
+                    <label><input type="radio" name="trip-type"> Muliticity</label>
+                </div>
+                <div class="miles-switch">
+                    <input type="checkbox" id="milesToggle" class="toggle-switch">
+                    <label for="milesToggle" class="toggle-label"></label>
+                    <label for="milesToggle" class="miles-text">Buy a ticket with Miles</label>
+                </div>
+            </div>
+            
+            <div class="input-grid">
+                
+                <div class="input-group-pair">
+                    <div class="input-group">
+                        <label>From</label>
+                        <input type="text" placeholder="From">
+                    </div>
+                    <button class="swap-button" title="Swap Origin and Destination"><i class="fas fa-exchange-alt"></i></button>
+                    <div class="input-group">
+                        <label>To</label>
+                        <input type="text" placeholder="To">
+                    </div>
+                </div>
+
+                <div class="input-group date-input">
+                    <label>Departure Date</label>
+                    <input type="date" placeholder="Departure Date">
+                    <i class="fas fa-calendar-alt calendar-icon"></i>
+                </div>
+
+                <div class="input-group date-input">
+                    <label>Return Date</label>
+                    <input type="date" placeholder="Return Date">
+                    <i class="fas fa-calendar-alt calendar-icon"></i>
+                </div>
+                
+                <div class="input-group">
+                    <select>
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select>
+                        <option>ALL</option>
+                        <option>Economy</option>
+                        <option>Business</option>
+                    </select>
+                </div>
+
+                <div class="input-group currency-search">
+                    <select>
+                        <option>PKR</option>
+                        <option>USD</option>
+                    </select>
+                    <button class="search-button" aria-label="Search Flights"><i class="fas fa-search"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </section>
    <!-- Hero section end --> 
    <!-- Gallery section -->
@@ -141,8 +219,6 @@
     <div class="gallery-slide" style="background-image: url('images/g1.jpg');"></div> <!-- duplicate for loop -->
   </div>
 </section>
-
-
 <!-- Services Section -->
 <section class="services">
   <div class="container">
@@ -169,8 +245,8 @@
         <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
       </div>
       <div class="service-card">
-        <img src="images/services4.png" alt="Service 3">
-        <h3>Service Three</h3>
+        <img src="images/services4.png" alt="Service 4">
+        <h3>Service Four</h3>
         <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
       </div>
     </div>

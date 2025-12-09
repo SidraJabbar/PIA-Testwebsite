@@ -250,7 +250,7 @@ nav {
 .slides .slide {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 90%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -277,6 +277,337 @@ nav {
   25% { opacity: 1; }
   30% { opacity: 0; }
   100% { opacity: 0; }
+}
+
+/* --- Root Variables for Colors --- */
+:root {
+    --color-gold: #d8a00c;
+    --color-green: #007a33;
+    --color-dark-tab: #4b4b4b;
+    --color-dark-header: #2e2e2e;
+}
+/* --- Widget Container (Key for Overlap) --- */
+.booking-container {
+    max-width: 850px;
+    width: 80%; 
+    margin: 0 auto; /* Center the container */
+    /* Adjust this negative margin to control how much the widget overlaps your banner */
+    margin-top: 300px; 
+    position: relative; 
+    z-index: 10; /* Ensures the widget sits on top of the banner */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+}
+
+/* --- Tab Header Styling --- */
+.tabs-header {
+    display: flex;
+    background-color: var(--color-dark-header); 
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.tab {
+    padding: 15px 15px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--color-dark-tab); 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+    justify-content: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.tab.active {
+    background-color: var(--color-gold); 
+    color: #fff;
+    /* Keeps the active tab visually connected to the white form */
+    margin-bottom: -1px; 
+}
+
+/* --- Search Form Card --- */
+.search-form-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0 0 8px 8px; 
+}
+
+/* --- Trip Type Row (Flexbox) --- */
+.trip-type-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    /* Set the parent container to be a flexible container */
+    display: flex; 
+    /* Align items centrally (optional) */
+    align-items: center;
+}
+
+.radio-group label {
+    /* Each label (which contains the radio button and text) 
+       will now be treated as a flexible item and sit in a row. */
+    display: flex;
+    flex-direction: row; /* Ensures the radio button and text are side-by-side */
+    margin-right: 20px;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* --- Toggle Switch Styling (Miles Switch) --- */
+.miles-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.miles-switch .toggle-switch {
+    display: none; /* Hide the default checkbox */
+}
+.miles-switch .toggle-label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.miles-switch .toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.miles-switch input:checked + .toggle-label {
+    background-color: var(--color-gold);
+}
+.miles-switch input:checked + .toggle-label::after {
+    left: 22px;
+}
+.miles-switch .miles-text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- Input Grid (CSS Grid) --- */
+.input-grid {
+    display: grid;
+    /* Creates 3 columns: 2 wide columns, and one standard column */
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 15px;
+    align-items: start;
+}
+
+.input-group, 
+.input-group-pair {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the combined From/To input box */
+.input-group-pair {
+    grid-column: span 1; 
+    flex-direction: row;
+    align-items: stretch;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    height: 60px; /* Set a fixed height for the whole group */
+}
+
+.input-group-pair .input-group {
+    flex-grow: 1;
+    border: none;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-group-pair input {
+    border: none; 
+    background: transparent;
+    padding: 0;
+    min-height: 20px; /* Adjusted height within the group */
+}
+
+.swap-button {
+    background-color: #f0f0f0;
+    border: none;
+    color: #555;
+    padding: 0 12px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 100%;
+    align-self: center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.swap-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Base styling for all individual inputs/selects */
+.input-group input,
+.input-group select {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    appearance: none; 
+    background-color: #fff;
+    min-height: 60px; /* Main inputs/selects height */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Label styling to float text above the input value */
+.input-group label {
+    font-size: 12px;
+    color: #888;
+    position: absolute; 
+    top: 5px; 
+    left: 10px; 
+    z-index: 2;
+    background-color: #fff;
+    padding: 0 5px;
+}
+.input-group-pair label {
+    top: 8px; /* Adjustment for labels inside the combined group */
+}
+
+
+/* Date Input with Calendar Icon */
+.date-input {
+    position: relative;
+}
+.date-input input[type="date"] {
+    padding-right: 35px; /* Make space for the icon */
+}
+.calendar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(20%); /* Vertically align icon with input text */
+    color: #888;
+    pointer-events: none; 
+}
+
+/* 2nd Row Input Adjustments */
+.input-grid > div:nth-child(4), 
+.input-grid > div:nth-child(5), 
+.input-grid > div:nth-child(6) {
+    /* These three elements start the second row on desktop */
+    grid-row: 2;
+}
+
+/* Currency and Search Button */
+.currency-search {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.currency-search select {
+    flex-grow: 1;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-button {
+    background-color: var(--color-green); 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 0 4px 4px 0;
+    min-width: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-button i {
+    font-size: 20px;
+}
+.search-button:hover {
+    background-color: #005f28;
+}
+
+/* --- Responsiveness (Media Queries) --- */
+
+/* Medium Screens (e.g., Tablet) */
+@media (max-width: 900px) {
+    .input-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-rows: auto;
+    }
+    
+    .input-group-pair {
+        grid-column: span 2; /* From/To pair spans both columns */
+        height: 60px;
+    }
+    
+    /* Reset row placement for new grid */
+    .date-input:nth-child(2) { grid-column: 1; }
+    .date-input:nth-child(3) { grid-column: 2; }
+    
+    /* Place the dropdowns and search button into the grid flow */
+    .input-grid > div:nth-child(4) { grid-row: 3; grid-column: 1; } /* 1 Adult */
+    .input-grid > div:nth-child(5) { grid-row: 3; grid-column: 2; } /* ALL */
+    .input-grid > div:nth-child(6) { grid-row: 4; grid-column: span 2; } /* Currency/Search spans both columns */
+}
+
+/* Small Screens (e.g., Mobile) */
+@media (max-width: 550px) {
+    .trip-type-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .input-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    
+    /* All elements span the single column */
+    .input-group-pair,
+    .date-input,
+    .currency-search,
+    .input-grid > div:nth-child(4), 
+    .input-grid > div:nth-child(5), 
+    .input-grid > div:nth-child(6) {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+    
+    .tabs-header {
+        flex-wrap: wrap;
+    }
+    .tab {
+        flex-basis: 45%; 
+        font-size: 13px;
+        padding: 10px 5px;
+    }
 }
 
 /* Main gallery section */
@@ -363,7 +694,7 @@ nav {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-direction: column; /* STACK heading + cards */
+  flex-direction: column;
   align-items: flex-start;
   gap: 40px;
 }
@@ -374,11 +705,12 @@ nav {
   margin-bottom: 10px;
   color: rgb(0, 105, 55);
 }
-/* Cards row — 3 in one line */
+
+/* Cards row — Responsive grid */
 .services-right {
   width: 100%;
-  display: flex;
-  justify-content: space-between;  /* equal spacing */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards in desktop */
   gap: 20px;
 }
 
@@ -388,7 +720,6 @@ nav {
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  width: 32%; /* 3 cards per row */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
@@ -409,11 +740,113 @@ nav {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
 .service-card p {
   font-size: 14px;
   color: #555;
 }
 
+/* Responsive Media Queries */
+
+/* Tablet: 3 cards per row */
+@media (max-width: 1024px) {
+  .services-right {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards */
+  }
+  
+  .services .container {
+    padding: 20px;
+  }
+  
+  .services-left h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Medium Tablet: 2 cards per row */
+@media (max-width: 768px) {
+  .services-right {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards */
+  }
+  
+  .services {
+    padding: 40px 15px;
+  }
+  
+  .services .container {
+    padding: 15px;
+    gap: 30px;
+  }
+  
+  .services-left h2 {
+    font-size: 2rem;
+  }
+  
+  .service-card img {
+    height: 180px;
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 576px) {
+  .services-right {
+    grid-template-columns: 1fr; /* 1 card */
+    gap: 15px;
+  }
+  
+  .services {
+    padding: 30px 10px;
+  }
+  
+  .services .container {
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .services-left h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .service-card {
+    padding: 15px;
+  }
+  
+  .service-card img {
+    height: 160px;
+  }
+  
+  .service-card h3 {
+    font-size: 18px;
+  }
+  
+  .service-card p {
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .services-left h2 {
+    font-size: 1.6rem;
+  }
+  
+  .service-card {
+    padding: 12px;
+  }
+  
+  .service-card img {
+    height: 140px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .services .container {
+    max-width: 1300px;
+  }
+}
 /* Offers Section */
 .offers {
     margin: 30px 20px;
@@ -613,22 +1046,22 @@ nav {
         font-size: 13px;
     }
 }
-/* news section*/
+/* ======================================================
+   NEWS SECTION
+   ====================================================== */
 .news-section {
-    padding: 55px 55px;
+    padding: 55px 20px;
     background-color: #f7f9f6;
 }
 
 .news-heading {
-  text-align: left;
+    text-align: left;
     font-size: 2.5rem;
-    margin-bottom: 30px;
-    margin-top: 0px;
+    margin: 0 0 20px 0;
     color: rgb(0, 105, 55);
-
-    margin-bottom: 20px;
 }
 
+/* Carousel */
 .news-carousel {
     position: relative;
     overflow: hidden;
@@ -639,101 +1072,74 @@ nav {
     transition: transform 0.5s ease;
 }
 
-/* News Cards */
+/* ===========================
+   DESKTOP — 3 CARDS
+   =========================== */
 .news-card {
-    flex: 0 0 calc(100% / 3);
+    flex: 0 0 calc(33.333% - 20px);
     background: #fff;
     margin-right: 20px;
-    border-radius: 0px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Ensures button stays bottom aligned */
 }
 
+/* Video */
 .video-wrapper {
     height: 250px;
     overflow: hidden;
 }
-
 .news-card video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Text */
 .news-card h3 {
     font-size: 18px;
-    color: rgb(0, 105, 55);
-    margin: 10px 15px 10px;
+    color: rgb(0,105,55);
+    margin: 10px 15px;
 }
-
 .news-card p {
     font-size: 12px;
     margin: 0 15px 10px;
-    color: #000;
-    line-height: 1.4;
 }
 
-/* Small Left-Aligned Button */
+/* Button */
 .news-card .btn {
-    margin: auto 15px 12px;  /* left aligned + bottom spacing */
+    margin: auto 15px 12px;
     padding: 6px 10px;
-    background-color: #ffffff;
-    color: rgb(0, 105, 55);
-    border: 1px solid rgb(0, 105, 55);
+    background: #fff;
+    color: rgb(0,105,55);
+    border: 1px solid rgb(0,105,55);
     border-radius: 3px;
     text-decoration: none;
-    display: inline-block;
-    text-align: left;
     font-size: 12px;
     width: fit-content;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
-
-/* Hover Effect */
 .news-card .btn:hover {
     background-color: #f8fffa;
     color: #e4a457;
 }
 
 /* Arrows */
-/* Arrows Wrapper */
 .arrows {
     position: absolute;
-    top: 45%; /* Move slightly above cards */
+    top: 45%;
     width: 100%;
-    pointer-events: none; /* stops blocking card hover & clicks */
+    pointer-events: none;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
 }
-
-/* Arrow Buttons */
 .news-prev,
 .news-next {
-    color: rgb(0, 105, 55);
+    color: rgb(0,105,55);
     font-size: 25px;
-    font-weight: bold;
     cursor: pointer;
-    width: 36px;
-    height: 36px;
-    pointer-events: auto; /* re-enable clicking only on arrows */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* CSS-only carousel logic using radio buttons */
-#slide1:checked ~ .news-row {
-    transform: translateX(0%);
-}
-#slide2:checked ~ .news-row {
-    transform: translateX(-33.33%);
-}
-#slide3:checked ~ .news-row {
-    transform: translateX(-66.66%);
+    pointer-events: auto;
+    margin: 0 10px;
 }
 
 /* Hide radio buttons */
@@ -741,18 +1147,91 @@ nav {
     display: none;
 }
 
-/*mobile banner section*/
+/* Desktop slide logic */
+#slide1:checked ~ .news-row { transform: translateX(0%); }
+#slide2:checked ~ .news-row { transform: translateX(-33.333%); }
+#slide3:checked ~ .news-row { transform: translateX(-66.666%); }
+
+
+/* ======================================================
+   TABLET — 2 CARDS
+   ====================================================== */
+@media (max-width: 1024px) {
+
+    .news-section { padding: 40px 15px; }
+
+    .news-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    /* Slide logic for 2 cards */
+    #slide1:checked ~ .news-row { transform: translateX(0%); }
+    #slide2:checked ~ .news-row { transform: translateX(-50%); }
+    #slide3:checked ~ .news-row { transform: translateX(-100%); }
+}
+
+
+/* ======================================================
+   MOBILE — 1 CARD
+   ====================================================== */
+@media (max-width: 616px) {
+
+    .news-section {
+        padding: 30px 10px;
+    }
+
+    .news-heading {
+        font-size: 2rem;
+    }
+
+    /* FORCE ONLY 1 CARD */
+    .news-row {
+        gap: 0 !important;
+    }
+
+    .news-card {
+        flex: 0 0 100% !important;
+        margin-right: 0 !important;
+    }
+
+    .video-wrapper {
+        height: 200px;
+    }
+
+    .news-card h3 {
+        font-size: 16px;
+    }
+
+    /* Slide logic for single card */
+    #slide1:checked ~ .news-row { transform: translateX(0); }
+    #slide2:checked ~ .news-row { transform: translateX(-100%); }
+    #slide3:checked ~ .news-row { transform: translateX(-200%); }
+
+    .news-prev,
+    .news-next {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Mobile Banner Section */
 .mobile-banner {
   display: flex;
   gap: 25px;
-  padding: 40px 60px;
+  padding: 40px 50px;
   background: #faf6ec;
+  /* flex-wrap: wrap; is important for initial shrinking before column switch */
+  flex-wrap: wrap; 
 }
 
-.left-card, .right-card {
-  flex: 1;
+.left-card,
+.right-card {
+  /* Default: side-by-side */
+  flex: 1; 
   border-radius: 18px;
-  min-height: 340px;
+  height: 200px;
+  width: 450px;
   padding: 30px;
   background-size: cover;
   background-position: center;
@@ -778,7 +1257,7 @@ nav {
   color: white;
 }
 
-/* --- Left Card Inner Elements --- */
+/* Left Card Inputs */
 .form-row {
   display: flex;
   gap: 20px;
@@ -789,8 +1268,10 @@ nav {
   flex: 1;
 }
 
-input, select {
-  width: 90%;
+input,
+select {
+  /* Default width when side-by-side */
+  width: 90%; 
   padding: 12px;
   border-radius: 10px;
   border: none;
@@ -799,21 +1280,20 @@ input, select {
 }
 
 .btn-submit {
-  background:rgb(0, 105, 55);
+  background: rgb(0, 105, 55);
   color: white;
   border: none;
   margin-top: 15px;
   padding: 12px 30px;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 2px;
+  font-size: 14px;
   cursor: pointer;
 }
-
 .btn-submit:hover {
   background: #005a25;
 }
 
-/* --- Right Card Inner Elements --- */
+/* Right Card */
 .right-card .text {
   flex: 1;
 }
@@ -824,9 +1304,9 @@ input, select {
 }
 
 .mobile-image img {
-  width: 220px;
+  width: 150px;
+  height: 220px;
 }
-/*Footer Section*/
 /* Footer Section */
 .footer {
   padding: 40px 20px;
