@@ -1,0 +1,151 @@
+/* ======================================================
+   NEWS SECTION
+   ====================================================== */
+.news-section {
+  padding: 55px 20px;
+  background-color: #f7f9f6;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.news-heading {
+  font-size: 2.5rem;
+  color: rgb(0, 105, 55);
+  margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------------
+   CAROUSEL BASE
+------------------------------------------------------------------ */
+.news-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.news-carousel input[type="radio"] {
+  display: none;
+}
+
+.news-row {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ------------------------------------------------------------------
+   CARDS — DESKTOP (3 CARDS VIEW)
+------------------------------------------------------------------ */
+.news-card {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-right: 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.news-card:last-child {
+  margin-right: 0;
+}
+
+.video-wrapper {
+  height: 250px;
+  overflow: hidden;
+}
+
+.news-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-card h3 {
+  font-size: 18px;
+  color: rgb(0,105,55);
+  margin: 10px 15px;
+}
+
+.news-card p {
+  font-size: 12px;
+  margin: 0 15px 12px;
+}
+
+.news-card .btn {
+  margin: 0 15px 12px;
+  padding: 6px 10px;
+  border: 1px solid rgb(0,105,55);
+  color: rgb(0,105,55);
+  background: white;
+  border-radius: 3px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* ------------------------------------------------------------------
+   ARROWS — ALWAYS VISIBLE
+------------------------------------------------------------------ */
+.news-prev,
+.news-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(0,105,55,0.8);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.9;
+}
+
+.news-prev { left: 10px; }
+.news-next { right: 10px; }
+
+/* ------------------------------------------------------------------
+   MOVEMENT — DESKTOP (3 CARDS)
+   Each slide moves EXACTLY 1 card:
+   => card width = calc(33.33% + 20px)
+------------------------------------------------------------------ */
+#slide1:checked ~ .news-row { transform: translateX(0); }
+#slide2:checked ~ .news-row { transform: translateX(calc(-33.33% - 20px)); }
+#slide3:checked ~ .news-row { transform: translateX(calc(-66.66% - 40px)); }
+#slide4:checked ~ .news-row { transform: translateX(calc(-100% - 60px)); }
+#slide5:checked ~ .news-row { transform: translateX(calc(-133.33% - 80px)); }
+
+/* ======================================================
+   TABLET — 2 CARDS
+====================================================== */
+@media (max-width: 1024px) {
+
+  .news-card {
+    flex: 0 0 calc(50% - 10px);
+    margin-right: 20px;
+  }
+
+  #slide1:checked ~ .news-row { transform: translateX(0); }
+  #slide2:checked ~ .news-row { transform: translateX(calc(-50% - 20px)); }
+  #slide3:checked ~ .news-row { transform: translateX(calc(-100% - 40px)); }
+  #slide4:checked ~ .news-row { transform: translateX(calc(-150% - 60px)); }
+  #slide5:checked ~ .news-row { transform: translateX(calc(-200% - 80px)); }
+}
+
+/* ======================================================
+   MOBILE — 1 CARD
+====================================================== */
+@media (max-width: 616px) {
+
+  .news-card {
+    flex: 0 0 100%;
+    margin-right: 0;
+  }
+
+  #slide1:checked ~ .news-row { transform: translateX(0); }
+  #slide2:checked ~ .news-row { transform: translateX(-100%); }
+  #slide3:checked ~ .news-row { transform: translateX(-200%); }
+  #slide4:checked ~ .news-row { transform: translateX(-300%); }
+  #slide5:checked ~ .news-row { transform: translateX(-400%); }
+}

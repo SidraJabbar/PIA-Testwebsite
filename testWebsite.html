@@ -1,119 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ServiceSection.css" />
+    <link rel="stylesheet" href="OfferSection.css" />
+    <link rel="stylesheet" href="ExecutiveSection.css" />
+    <link rel="stylesheet" href="NewsSection.css" />
+    <link rel="stylesheet" href="MobileBannerSection.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>PIA Website</title>
   </head>
   <body>
    <header class="main-header">
-  <div class="logo">
-    <a href="#"><img src="images/logo.svg" alt="Logo" class="logo-img"></a>
-  </div>
-
-  <nav>
-    <ul class="nav-links">
-      <li class="dropdown"><a href="#where" class="nav-item">Where We Fly</a>
-        <ul class="dropdown-menu">
-          <li><a href="Destination.html">Destination</a></li>
-          <li><a href="#">Our Network</a></li>
-          <li><a href="#">Map</a></li>
-        </ul>
-      </li>
-      <li class="dropdown"><a href="#exp" class="nav-item">Experience</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Baggage</a></li>
-          <li><a href="#">Cabins</a></li>
-          <li><a href="#">Seat</a></li>
-          <li><a href="#">Turkey</a></li>
-        </ul>
-      </li>
-      <li class="dropdown"><a href="#loyal" class="nav-item">Loyalty Program</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Pakistan</a></li>
-          <li><a href="#">UAE</a></li>
-          <li><a href="#">Saudi Arabia</a></li>
-          <li><a href="#">Turkey</a></li>
-        </ul>
-      </li>
-      <li class="dropdown"><a href="#deals" class="nav-item">Deals</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Online Discounts</a></li>
-        </ul>
-      </li>
-      <li class="dropdown"><a href="#corp" class="nav-item">Corporate Website</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Pakistan</a></li>
-          <li><a href="#">UAE</a></li>
-          <li><a href="#">Saudi Arabia</a></li>
-          <li><a href="#">Turkey</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-
-  <div class="header-right">
-    <!-- Just a search icon -->
-    <span class="search-icon">🔍</span>
-
-    <!-- Hidden checkbox for modal -->
-    <input type="checkbox" id="modal-toggle" hidden>
-
-    <!-- Award/Login button -->
-    <label for="modal-toggle" class="login-btn">Award + Login</label>
-
-    <!-- Modal -->
-    <div class="modal">
-        <div class="modal-content">
-            <label for="modal-toggle" class="close">&times;</label>
-
-            <!-- Tabs -->
-            <input type="radio" id="tab-award" name="tab" checked hidden>
-            <input type="radio" id="tab-corp" name="tab" hidden>
-
-            <div class="tabs">
-                <label for="tab-award" class="tab-btn">Award</label>
-                <label for="tab-corp" class="tab-btn">Corporate Program</label>
-            </div>
-
-            <div class="tab-content" id="award">
-                <h3>Award</h3>
-                <label>Member ID / CNIC / Passport</label>
-                <input type="text" placeholder="Enter">
-                <label>Password</label>
-                <input type="password" placeholder="Enter">
-                <a href="#">Forgot Password?</a>
-                <p>Not a member yet? <a href="#">Sign Up</a></p>
-                <button class="submit-btn">Login</button>
-            </div>
-
-            <div class="tab-content" id="corporate">
-                <h3>Corporate Program</h3>
-                <label>Member ID / CNIC / Passport</label>
-                <input type="text" placeholder="Enter">
-                <label>Password</label>
-                <input type="password" placeholder="Enter">
-                <a href="#">Forgot Password?</a>
-                <button class="submit-btn">Login</button>
-            </div>
-        </div>
+    <div class="logo">
+        <a href="#"><img src="images/logo.svg" alt="Logo" class="logo-img"></a>
     </div>
-</div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" hidden>
+    <nav>
+        <ul class="nav-links">
+            <li class="dropdown"><a href="#where" class="nav-item">Where We Fly</a>
+                <ul class="dropdown-menu">
+                    <li><a href="">Destination</a></li>
+                    <li><a href="#">Our Network</a></li>
+                    <li><a href="#">Map</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#exp" class="nav-item">Experience</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Baggage</a></li>
+                    <li><a href="#">Cabins</a></li>
+                    <li><a href="#">Seat</a></li>
+                    <li><a href="#">Turkey</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#loyal" class="nav-item">Loyalty Program</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Pakistan</a></li>
+                    <li><a href="#">UAE</a></li>
+                    <li><a href="#">Saudi Arabia</a></li>
+                    <li><a href="#">Turkey</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#deals" class="nav-item">Deals</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Online Discounts</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#corp" class="nav-item">Corporate Website</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Pakistan</a></li>
+                    <li><a href="#">UAE</a></li>
+                    <li><a href="#">Saudi Arabia</a></li>
+                    <li><a href="#">Turkey</a></li>
+                </ul>
+            </li>
+        </ul>
+      </nav>
+    <div class="header-right">
+        <span class="search-icon">🔍</span>
+        <label for="menu-toggle" class="menu-toggle-label">
+            <div class="hamburger-icon"></div>
+        </label>
+        <a href="#" class="login-btn">Award + Login</a>
+    </div>
 </header>
    <!-- Hero Section -->
 <section class="hero">
-  <!-- Slider images using radio buttons -->
   <input type="radio" name="slide" id="s1" checked hidden>
   <input type="radio" name="slide" id="s2" hidden>
   <input type="radio" name="slide" id="s3" hidden>
-  <input type="radio" name="slide" id="s4" hidden> <!-- Add 4th radio button -->
+  <input type="radio" name="slide" id="s4" hidden> 
   <div class="slides">
     <div class="slide" style="background-image: url('images/1.jpg');"></div>
     <div class="slide" style="background-image: url('images/2.jpg');"></div>
     <div class="slide" style="background-image: url('images/3.jpg');"></div>
     <div class="slide" style="background-image: url('images/4.jpg');"></div>
   </div>
-  
     <div class="booking-container">
-        
         <div class="tabs-header">
             <div class="tab active"><i class="fas fa-plane"></i> Flight</div>
             <div class="tab"><i class="fas fa-keyboard"></i> Web Check-in</div>
@@ -121,7 +86,6 @@
             <div class="tab"><i class="fas fa-info-circle"></i> Flight Status</div>
             <div class="tab"><i class="far fa-calendar-alt"></i> Schedules</div>
         </div>
-
         <div class="search-form-card">
             
             <div class="trip-type-row">
@@ -193,14 +157,12 @@
    <!-- Hero section end --> 
    <!-- Gallery section -->
 <section class="image-gallery">
-  <!-- Radio buttons for controlling slides -->
+  <!-- Radio buttons for desktop slider -->
   <input type="radio" name="gallery" id="g1" checked>
   <input type="radio" name="gallery" id="g2">
   <input type="radio" name="gallery" id="g3">
   <input type="radio" name="gallery" id="g4">
   <input type="radio" name="gallery" id="g5">
-
-  <!-- Text items linked to slides -->
   <ul class="gallery-text">
     <li><label for="g1">Charter Flight</label></li>
     <li><label for="g2">Online Discount</label></li>
@@ -208,48 +170,48 @@
     <li><label for="g4">Call n Fly</label></li>
     <li><label for="g5">Nusuk</label></li>
   </ul>
-
-  <!-- Image slides -->
+  <!-- Gallery slides -->
   <div class="gallery-slides">
-    <div class="gallery-slide" style="background-image: url('images/g1.jpg');"></div>
-    <div class="gallery-slide" style="background-image: url('images/g2.jpg');"></div>
-    <div class="gallery-slide" style="background-image: url('images/g3.jpg');"></div>
-    <div class="gallery-slide" style="background-image: url('images/call.jpg');"></div>
-    <div class="gallery-slide" style="background-image: url('images/g5.jpg');"></div>
-    <div class="gallery-slide" style="background-image: url('images/g1.jpg');"></div> <!-- duplicate for loop -->
+    <div class="gallery-slide" data-heading="Charter Flight" style="background-image: url('images/g1.jpg');"></div>
+    <div class="gallery-slide" data-heading="Online Discount" style="background-image: url('images/g2.jpg');"></div>
+    <div class="gallery-slide" data-heading="Web & Mobile Check-In" style="background-image: url('images/g3.jpg');"></div>
+    <div class="gallery-slide" data-heading="Call n Fly" style="background-image: url('images/call.jpg');"></div>
+    <div class="gallery-slide" data-heading="Nusuk" style="background-image: url('images/g5.jpg');"></div>
+    <div class="gallery-slide" data-heading="Charter Flight" style="background-image: url('images/g1.jpg');"></div>
   </div>
+
 </section>
+<!-- Gallery section End -->
 <!-- Services Section -->
 <section class="services">
   <div class="container">
-    <!-- Left side title -->
     <div class="services-left">
       <h2>Our Services</h2>
     </div>
-
-    <!-- Right side cards/dialogs -->
     <div class="services-right">
-      <div class="service-card">
-        <img src="images/services1.png" alt="Service 1">
-        <h3>Service One</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="service-grid-view">
+        <div class="service-card">
+          <img src="images/services1.png" alt="Service 1">
+          <h3>Service One</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/service2.jpg" alt="Service 2">
+          <h3>Service Two</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/services3.png" alt="Service 3">
+          <h3>Service Three</h3>
+          <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/services4.png" alt="Service 4">
+          <h3>Service Four</h3>
+          <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </div>
       </div>
-      <div class="service-card">
-        <img src="images/service2.jpg" alt="Service 2">
-        <h3>Service Two</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
       </div>
-      <div class="service-card">
-        <img src="images/services3.png" alt="Service 3">
-        <h3>Service Three</h3>
-        <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/services4.png" alt="Service 4">
-        <h3>Service Four</h3>
-        <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
-      </div>
-    </div>
   </div>
 </section>
 <!--Service end-->
@@ -259,7 +221,7 @@
         <h2 class="offers-heading">Best Offers</h2>
         <div class="offers-grid">
             <div class="offer-card offer1">
-                <img src="images/offer1.png" alt="Offer 1">
+                <img src="images/Skardu.png" alt="Offer 1">
                 <div class="overlay">
                     <button>Book Now</button>
                     <button>More Details</button>
@@ -269,7 +231,7 @@
             </div>
 
             <div class="offer-card offer4">
-                <img src="images/offer2.png" alt="Offer 4">
+                <img src="images/Islamabad.png" alt="Offer 4">
                 <div class="overlay">
                     <button>Book Now</button>
                     <button>More Details</button>
@@ -279,7 +241,7 @@
             </div>
 
             <div class="offer-card offer2">
-                <img src="images/offer3.png" alt="Offer 2">
+                <img src="images/IslamabadToronto.png" alt="Offer 2">
                 <div class="overlay">
                     <button>Book Now</button>
                     <button>More Details</button>
@@ -289,7 +251,7 @@
             </div>
 
             <div class="offer-card offer3">
-                <img src="images/offer4.png" alt="Offer 3">
+                <img src="images/Kuala Lumpur.png" alt="Offer 3">
                 <div class="overlay">
                     <button>Book Now</button>
                     <button>More Details</button>
@@ -299,7 +261,7 @@
             </div>
 
             <div class="offer-card offer5">
-                <img src="images/offer5.jpeg" alt="Offer 5">
+                <img src="images/LahoreBaku.jpeg" alt="Offer 5">
                 <div class="overlay">
                     <button>Book Now</button>
                     <button>More Details</button>
@@ -311,11 +273,11 @@
         </div>
     </div>
 </section>
+<!--Offer Section End-->
 <!--Executive section-->
 <section class="executive-program">
     <div class="program-container">
-        <h2 class="program-title">A+ Executive Corporate Program</h2>
-        
+        <h2 class="program-title">A+ Executive Corporate Program</h2>  
         <div class="program-content">
             <p>Our business services offer flexibility and exclusive savings for your company.</p>
             <p>We provide tailored solutions based on your travel spend to maximize your corporate travel budget.</p>
@@ -323,77 +285,77 @@
             <p>Additionally, you can use your rewards for flight upgrades and other benefits like excess baggage and pre-allocation of seats.</p>
             <p>Our goal is to enhance your corporate travel experience and ensure the best value for your budget.</p>
         </div>
-
         <a href="#" class="btn-member">Become a Member</a>
     </div>
 </section>
+<!--Executive section End-->
 <!-- News Section -->
-<!-- News Section -->
- <section class="news-section">
-    <h2 class="news-heading">Our News</h2>
+<section class="news-section">
+  <h2 class="news-heading">Our News</h2>
+  <div class="news-carousel">
 
-    <div class="news-carousel">
+    <input type="radio" name="carousel" id="slide1" checked>
+    <input type="radio" name="carousel" id="slide2">
+    <input type="radio" name="carousel" id="slide3">
+    <input type="radio" name="carousel" id="slide4">
+    <input type="radio" name="carousel" id="slide5">
 
-        <!-- Radio buttons -->
-        <input type="radio" name="carousel" id="slide1" checked>
-        <input type="radio" name="carousel" id="slide2">
-        <input type="radio" name="carousel" id="slide3">
+    <label for="slide5" class="news-prev prev-5">‹</label>
+    <label for="slide1" class="news-prev prev-1">‹</label>
+    <label for="slide2" class="news-prev prev-2">‹</label>
+    <label for="slide3" class="news-prev prev-3">‹</label>
+    <label for="slide4" class="news-prev prev-4">‹</label>
 
-        <!-- Carousel wrapper -->
-        <div class="news-row">
-            <div class="news-card" id="card1">
-                <div class="video-wrapper">
-                    <video src="videos/video1.mp4" poster="images/n5.png" controls></video>
-                </div>
-                <h3>PIA Reconnects Islamabad & Manchester!</h3>
-                <p>Pakistan International Airlines (PIA) is set to resume its highly-anticipated Islamabad-to-Manchester route after a five-year hiatus, connecting the capital with the UK's North once again with 2 weekly flights.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="news-card" id="card2">
-                <div class="video-wrapper">
-                    <video src="videos/video2.mp4" poster="images/n1.png" controls></video>
-                </div>
-                <h3>Unveiling Skardu with PIA</h3>
-                <p>Discover the enchanting beauty of Skardu, a gem in Pakistan's northern regions, with Pakistan International Airlines (PIA). Nestled in the heart of the Karakoram Range, Skardu offers breathtaking landscapes, from towering mountains to serene lakes.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="news-card" id="card3">
-                <div class="video-wrapper">
-                    <video src="videos/video3.mp4" poster="images/n2.png" controls></video>
-                </div>
-                <h3>Dining with Luxury</h3>
-                <p>Embark on a culinary journey with Pakistan International Airlines (PIA) where every meal is a celebration of taste and tradition.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="news-card" id="card4">
-                <div class="video-wrapper">
-                    <video src="videos/video4.mp4" poster="images/n3.png" controls></video>
-                </div>
-                <h3>Baku awaits you</h3>
-                <p>Book your flights on PIA today and embark on an extraordinary adventure.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="news-card" id="card5">
-                <div class="video-wrapper">
-                    <video src="videos/video5.mp4" poster="images/n4.png" controls></video>
-                </div>
-                <h3>Corporate Executive Suite</h3>
-                <p>Experience the perfect blend of business and leisure at PIA's Airport Hotel Corporate Club Executive Suite.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+    <label for="slide2" class="news-next next-1">›</label>
+    <label for="slide3" class="news-next next-2">›</label>
+    <label for="slide4" class="news-next next-3">›</label>
+    <label for="slide5" class="news-next next-4">›</label>
+    <label for="slide1" class="news-next next-5">›</label>
+    <div class="news-row">
+      <div class="news-card">
+        <div class="video-wrapper">
+          <video src="videos/video1.mp4" poster="images/n5.png" controls></video>
         </div>
-
-        <!-- Arrows -->
-        <div class="arrows">
-            <label for="slide1" class="news-prev">&lt;</label>
-            <label for="slide2" class="news-next">&gt;</label>
+        <h3>PIA Reconnects Islamabad & Manchester!</h3>
+        <p>Pakistan International Airlines resumes Islamabad-to-Manchester route.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="news-card">
+        <div class="video-wrapper">
+          <video src="videos/video2.mp4" poster="images/n1.png" controls></video>
         </div>
+        <h3>Unveiling Skardu with PIA</h3>
+        <p>Discover the enchanting beauty of Skardu...</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="news-card">
+        <div class="video-wrapper">
+          <video src="videos/video3.mp4" poster="images/n2.png" controls></video>
+        </div>
+        <h3>Dining with Luxury</h3>
+        <p>Embark on a culinary journey with Pakistan International Airlines...</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="news-card">
+        <div class="video-wrapper">
+          <video src="videos/video4.mp4" poster="images/n3.png" controls></video>
+        </div>
+        <h3>Baku awaits you</h3>
+        <p>Book your flights on PIA today and embark on an extraordinary adventure.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="news-card">
+        <div class="video-wrapper">
+          <video src="videos/video5.mp4" poster="images/n4.png" controls></video>
+        </div>
+        <h3>Corporate Executive Suite</h3>
+        <p>Experience the perfect blend of business and leisure...</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
     </div>
+  </div>
 </section>
+<!--End News Section-->
 <!--Mobile banner section-->
 <section class="mobile-banner">
   <div class="left-card">
@@ -414,10 +376,8 @@
         </select>
       </div>
     </div>
-
     <button class="btn-submit">Sign in</button>
   </div>
-
   <div class="right-card">
     <div class="text">
       <h2>Check out our<br>mobile app</h2>
@@ -429,13 +389,11 @@
     </div>
   </div>
 </section>
-<!--Footer section-->
+<!--End Mobile banner section-->
 <!-- Footer Section -->
 <section class="footer-section">
   <footer class="footer">
     <div class="footer-content">
-
-      <!-- Top Row: Logo + Contacts -->
       <div class="footer-top-row">
         <div class="footer-logo">
           <img src="images/logo.svg" alt="Logo">
@@ -445,7 +403,6 @@
         <p><img src="images/socialIcons/gmail.png" class="icon"> example@gmail.com</p>
       </div>
       <br>
-      <!-- Social Icons Row -->
          <div class="social-line-wrapper">
           <span class="line"></span>
      <div class="social-icons">
@@ -457,9 +414,7 @@
       </div>
     <span class="line"></span>
          </div>
-      <!-- Footer Links Row -->
       <div class="footer-links-row">
-        <!-- About Us -->
         <div class="footer-col">
           <h3>About Us</h3>
          <div class="lists">
@@ -477,8 +432,6 @@
           </ul>
          </div>
         </div>
-
-        <!-- Facilities -->
         <div class="footer-col">
           <h3>Facilities</h3>
          <div class="lists">
@@ -496,8 +449,6 @@
           </ul>
          </div>
         </div>
-
-        <!-- Help & Contact -->
         <div class="footer-col">
           <h3>Help & Contact</h3>
          <div class="lists">
@@ -518,13 +469,11 @@
         </div>
       </div>
        <details class="footer-details">
-
   <summary class="toggle-btn">
     <span class="line"></span>
     <img src="images/arrowfooterdown.svg" class="toggle-icon">
     <span class="line"></span>
   </summary>
-
   <div class="hidden-text">
     <div class="footer-bottom-links">
       <a href="#">Cookie Policy</a>
@@ -534,14 +483,10 @@
       <a href="#">Cookie Consent</a>
     </div>
   </div>
-
 </details>
-
-
 <p class="copy">© 2024 Pakistan International. All Rights Reserved.</p>
-
   </footer>
 </section>
-
+<!--Footer section End-->
 </body>
 </html>

@@ -1,0 +1,110 @@
+.services {
+  margin: 5px 0;
+  background-color: #f0ebdc;
+  padding: 50px 20px;
+}
+.services .container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Heading Left */
+.services-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: rgb(0, 105, 55);
+}
+/* Service Grid View (The only view used now) */
+.service-grid-view {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Service Card */
+.service-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.service-grid-view .service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+/* Tablet 1024px and below: 3 Columns */
+@media (max-width: 1024px) {
+  .service-grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services-left h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablet 768px and below: 2 Columns */
+@media (max-width: 768px) {
+  .service-grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-left h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+/* Mobile 576px and below: 1 Column */
+@media (max-width: 576px) {
+  .service-grid-view {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .services {
+    padding: 35px 12px;
+  }
+
+  .services-left h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Small Mobile 375px */
+@media (max-width: 375px) {
+  .services-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .service-card {
+    padding: 12px;
+  }
+}
